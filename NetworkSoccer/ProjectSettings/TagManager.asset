@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GoalZoneBlue
+  - GoalZoneRed
   layers:
   - Default
   - TransparentFX
@@ -43,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 2581888989
+    locked: 0
+  - name: Balon
+    uniqueID: 3590459837
     locked: 0
   - name: Player
     uniqueID: 299559677
