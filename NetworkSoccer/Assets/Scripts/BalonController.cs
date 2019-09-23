@@ -10,7 +10,7 @@ public class BalonController : MonoBehaviour
     public Text BlueScore;
     private int goalred;
     private int goalblue;
-    public Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
     {
