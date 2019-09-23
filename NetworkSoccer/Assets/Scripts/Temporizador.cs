@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Temporizador : SoccerElement
+public class Temporizador : MonoBehaviour
 {
     private float count;
     public Text contador;

@@ -41,7 +41,7 @@ public class SoccerController : SoccerElement
                 string p = streamr.ReadLine();
                 Debug.Log(p);
                 float[] o = p.Split('|').Select(x => float.Parse(x)).ToArray();
-                
+
                 app.view.getP2().setMove(new Vector2(-o[0], -o[1]));
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ public class SoccerController : SoccerElement
     {
         try
         {
-            client.Connect("192.168.1.57", 8000);
+            client.Connect("172.30.179.185", 8000);
             if (client.Connected)
             {
                 Thread t = new Thread(Listen);

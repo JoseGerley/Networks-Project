@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BalonController : SoccerElement
+public class BalonController : MonoBehaviour
 {
+    public ReOrganizar organizador;
     public Text RedScore;
     public Text BlueScore;
     private int goalred;
     private int goalblue;
+    public Rigidbody2D rb2d;
     // Start is called before the first frame update
     void Start()
     {
         goalblue = 0;
         goalred = 0;
+        rb2d = GetComponent<Rigidbody2D>();
         SetText();
     }
 
@@ -28,12 +31,23 @@ public class BalonController : SoccerElement
         if (other.gameObject.CompareTag("GoalZoneRed"))
         {
             goalblue ++;
+            Point();
         }
         if (other.gameObject.CompareTag("GoalZoneBlue"))
         {
             goalred++;
+            Point();
         }
+        
+    }
+
+    public void Point()
+    {
         SetText();
+        organizador.Organizar();
+        rb2d.velocity = new Vector2(0, 0);
+        rb2d.transform.rotation = new Quaternion();
+        
     }
 
     private void SetText()
