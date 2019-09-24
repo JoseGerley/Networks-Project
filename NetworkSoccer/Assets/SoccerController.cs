@@ -13,12 +13,12 @@ public class SoccerController : SoccerElement
     static private StreamWriter streamw;
     static private StreamReader streamr;
     static private TcpClient client = new TcpClient();
-    public string nick = "unknown";
+    private string nick = "unknown";
     private string s = "";
     public void Start()
     {
-        Screen.SetResolution(Screen.width, Screen.height, FullScreenMode.Windowed);
-        Debug.Log("ey");
+        //Debug.Log(app.Name.getName());
+        //nick = app.Name.getName();
         s = app.view.getP1().getMove().x.ToString() + "|" + app.view.getP1().getMove().y.ToString();
         Conectar();
 
@@ -31,7 +31,6 @@ public class SoccerController : SoccerElement
 
     void Listen()
     {
-        Debug.Log(client.Connected);
         while (client.Connected)
         {
             try
@@ -55,6 +54,7 @@ public class SoccerController : SoccerElement
     {
         try
         {
+            //client.Connect("192.168.1.57", 8000);
             client.Connect("172.30.179.185", 8000);
             if (client.Connected)
             {
@@ -66,6 +66,7 @@ public class SoccerController : SoccerElement
                 streamw.WriteLine(nick);
                 streamw.Flush();
                 t.Start();
+                
             }
             else
             {

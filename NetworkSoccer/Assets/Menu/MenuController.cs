@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    public string NickName;
     public GameObject inputField;
+    public NameController Name;
     
     // Start is called before the first frame update
     void Start()
@@ -24,11 +24,13 @@ public class MenuController : MonoBehaviour
 
     public void EmpezarJuego() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 
     public void StoreName() {
 
-        NickName = inputField.GetComponent<Text>().text;
+        Name.setName( inputField.GetComponent<Text>().text);
+        Debug.Log(Name.getName());
     }
 
     public void Salir()

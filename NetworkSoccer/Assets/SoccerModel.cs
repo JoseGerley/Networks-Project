@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class SoccerModel : SoccerElement
 {
-    // Start is called before the first frame update
+    
+
+    public void Start()
+    {
+        
+    }
 
 }
