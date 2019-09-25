@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/crisf/source/repos/Networks-Project/NetworkSoccer.exe
+C:/Users/JOSE2/OneDrive/Documentos/Networks-Project/NetworkSoccer.exe
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
