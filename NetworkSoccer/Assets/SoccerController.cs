@@ -60,11 +60,8 @@ public class SoccerController : SoccerElement
         try
         {
             //client.Connect("192.168.1.57", 8000);
-<<<<<<< HEAD
             client.Connect("172.30.181.35", 8000);
-=======
-            client.Connect("172.30.179.186", 8000);
->>>>>>> b26b7481f6b0bd0b29f9db79278c93dae13d07dc
+
             if (client.Connected)
             {
                 Thread t = new Thread(Listen);
