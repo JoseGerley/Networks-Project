@@ -1,6 +1,10 @@
 Win64
 PlayerPath?
+<<<<<<< HEAD
 C:/Users/alvar/Downloads/Networks-Project/NetworkSoccer.exe
+=======
+C:/Users/JOSE2/OneDrive/Documentos/Networks-Project/NetworkSoccer.exe
+>>>>>>> b26b7481f6b0bd0b29f9db79278c93dae13d07dc
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
