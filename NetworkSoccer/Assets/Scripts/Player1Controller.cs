@@ -34,7 +34,11 @@ public class Player1Controller : MonoBehaviour
 
     void Update()
     {
-        rb2d.transform.rotation = rot;
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+            rb2d.transform.rotation = rot;
         velocity = rb2d.velocity;
         gameObject.GetComponent<Animator>().SetFloat("speedX", velocity.x);
         if (velocity.x < 0)

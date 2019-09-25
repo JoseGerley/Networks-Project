@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ReOrganizar : MonoBehaviour
 {
-    public static Vector3 posBaloon = new Vector3(0f, 0f, 0f);
-    public static Vector3 posP1 = new Vector3(0f, -1.45f);
-    public static Vector3 posP2 = new Vector3(0f, 1.45f);
+    public static Vector3 posBaloon = new Vector3(80.5f, 13.5f, 0f);
+    public static Vector3 posP1 = new Vector3( 80.5f, 11.9445f);
+    public static Vector3 posP2 = new Vector3(80.5f, (13.5f + 1.968f));
     public GameObject balon;
     public GameObject player1;
     public GameObject player2;
@@ -18,4 +18,19 @@ public class ReOrganizar : MonoBehaviour
         player1.transform.SetPositionAndRotation(posP1, rotation);
         player2.transform.SetPositionAndRotation(posP2, rotation);
     }
+
+    public void go() {
+        balon.GetComponent<Rigidbody2D>().Sleep();
+        player1.GetComponent<Rigidbody2D>().Sleep();
+        player2.GetComponent<Rigidbody2D>().Sleep();
+    }
+    public void stop()
+    {
+        balon.GetComponent<Rigidbody2D>().WakeUp();
+        player1.GetComponent<Rigidbody2D>().WakeUp();
+        player2.GetComponent<Rigidbody2D>().WakeUp();
+    }
+
+
+
 }

@@ -1,10 +1,6 @@
 Win64
 PlayerPath?
-<<<<<<< HEAD
-C:/Users/alvar/Downloads/Networks-Project/NetworkSoccer.exe
-=======
-C:/Users/JOSE2/OneDrive/Documentos/Networks-Project/NetworkSoccer.exe
->>>>>>> b26b7481f6b0bd0b29f9db79278c93dae13d07dc
+C:/Users/alvar/Desktop/Networks-Project/NetworkSoccer.exe
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
@@ -155,7 +151,6 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 1f5a6b85444f7dddf82c1490e6c7d877 Assembly-CSharp.dll:.Login
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Player2Controller
-5e00ad4d7bf9e7577f2ec7e3882a93ad Assembly-CSharp.dll:.MenuController
 11319334e5365797f8056694f9b5dae4 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.TMP_DigitValidator
 35a9693c388776aaf487636491a20f11 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
