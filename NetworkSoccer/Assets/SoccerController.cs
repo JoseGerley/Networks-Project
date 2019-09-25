@@ -20,8 +20,13 @@ public class SoccerController : SoccerElement
         //Debug.Log(app.Name.getName());
         //nick = app.Name.getName();
         s = app.view.getP1().getMove().x.ToString() + "|" + app.view.getP1().getMove().y.ToString();
-        Conectar();
+        
 
+    }
+
+    public void setName(string Name)
+    {
+        nick = Name;
     }
 
     public void FixedUpdate()
@@ -50,12 +55,12 @@ public class SoccerController : SoccerElement
         }
     }
 
-    void Conectar()
+    public void Conectar()
     {
         try
         {
             //client.Connect("192.168.1.57", 8000);
-            client.Connect("172.30.179.185", 8000);
+            client.Connect("172.30.181.35", 8000);
             if (client.Connected)
             {
                 Thread t = new Thread(Listen);
@@ -65,6 +70,8 @@ public class SoccerController : SoccerElement
 
                 streamw.WriteLine(nick);
                 streamw.Flush();
+
+
                 t.Start();
                 
             }
