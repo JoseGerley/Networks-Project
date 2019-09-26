@@ -9,6 +9,7 @@ public class Login : SoccerElement
     public Button jugar;
     private string NickName = "";
     public GameObject inputField;
+    public GameObject log;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,9 @@ public class Login : SoccerElement
         Debug.Log(""+NickName);
         app.controller.setName(NickName);
         app.controller.Conectar();
-
+        Debug.Log("Tan marica");
+        app.view.deleteLog();
+        
     }
 
 

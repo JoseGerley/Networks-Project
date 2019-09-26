@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class ReOrganizar : MonoBehaviour
 {
-    public static Vector3 posBaloon = new Vector3(80.5f, 13.5f, 0f);
-    public static Vector3 posP1 = new Vector3( 80.5f, 11.9445f);
-    public static Vector3 posP2 = new Vector3(80.5f, (13.5f + 1.968f));
+
+    public GameObject  cv;
+    public GameObject player;
     public GameObject balon;
     public GameObject player1;
     public GameObject player2;
 
+    public static Vector3 posBaloon = new Vector3(0,0);
+    public static Vector3 posP1 = new Vector3(0, -1.555f);
+    public static Vector3 posP2 = new Vector3(0,  1.968f);
+
     public void Organizar()
     {
+        
+       
+
         Quaternion rotation = new Quaternion();
         balon.transform.SetPositionAndRotation(posBaloon, rotation);
         player1.transform.SetPositionAndRotation(posP1, rotation);

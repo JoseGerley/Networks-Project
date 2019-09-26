@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugar: {fileID: 551016743}
   inputField: {fileID: 477686364}
+  log: {fileID: 538952850}
 --- !u!1 &156813916
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,9 +312,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241761078}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 763542804}
   - {fileID: 536204829}
@@ -323,9 +324,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 383.46, y: 189}
-  m_SizeDelta: {x: 757, y: 378}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &241761080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 541628977}
+  - {fileID: 1467293990}
   m_Father: {fileID: 1476339506}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -846,7 +848,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -378.5, y: -188.6, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1.1300005, z: 1}
   m_Children: []
   m_Father: {fileID: 1467293990}
@@ -990,8 +992,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1467293990}
+  m_Children: []
   m_Father: {fileID: 388340880}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1735,7 +1736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740318553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -378.5, y: -189, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1697792811}
@@ -2322,7 +2323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255272504}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -378.5, y: -189, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963945713}
@@ -2480,7 +2481,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467293989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2492,13 +2493,13 @@ RectTransform:
   - {fileID: 740318555}
   - {fileID: 519420032}
   - {fileID: 241761079}
-  m_Father: {fileID: 541628977}
-  m_RootOrder: 0
+  m_Father: {fileID: 388340880}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 816, y: 343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467293991
 MonoBehaviour:
@@ -2582,6 +2583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1: {fileID: 352995017299094898}
   p2: {fileID: 248119533}
+  login: {fileID: 538952850}
 --- !u!1 &1667683136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,7 +3373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113582150}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -378.5, y: -189, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1467293990}
@@ -3750,6 +3752,21 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 248119531}
+    - target: {fileID: 751718416518610853, guid: a1c9f4eceeab94b4da3aab26f915b718,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 541628980}
+    - target: {fileID: 751718416518610853, guid: a1c9f4eceeab94b4da3aab26f915b718,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1255272504}
+    - target: {fileID: 751718416518610853, guid: a1c9f4eceeab94b4da3aab26f915b718,
+        type: 3}
+      propertyPath: cv
+      value: 
+      objectReference: {fileID: 541628976}
     - target: {fileID: 4493622399343023738, guid: a1c9f4eceeab94b4da3aab26f915b718,
         type: 3}
       propertyPath: RedScore
