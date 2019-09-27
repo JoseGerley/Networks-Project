@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Login.unity
+- path: Assets/DatosPartido.unity
   isLoaded: 1
   isActive: 1
