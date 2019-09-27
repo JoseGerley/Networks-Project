@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Temporizador : MonoBehaviour
 {
-    public static float inicio = 10f;
+    public static float inicio = 60f;
     public ReOrganizar reorg;
     private float count;
     public Text contador;
