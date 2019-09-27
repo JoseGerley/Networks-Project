@@ -20,6 +20,8 @@ public class SoccerController : SoccerElement
         //Debug.Log(app.Name.getName());
         //nick = app.Name.getName();
         s = app.view.getP1().getMove().x.ToString() + "|" + app.view.getP1().getMove().y.ToString();
+        nick = app.duc.getNickName();
+        Conectar();
         
 
     }
@@ -44,6 +46,10 @@ public class SoccerController : SoccerElement
                 streamw.Flush();
                 string p = streamr.ReadLine();
                 Debug.Log(p);
+                if (p.Equals("Begin"))
+                {
+                    app.view.temp.setBegin(true);
+                }
                 float[] o = p.Split('|').Select(x => float.Parse(x)).ToArray();
 
                 app.view.getP2().setMove(new Vector2(-o[0], -o[1]));
@@ -60,7 +66,7 @@ public class SoccerController : SoccerElement
         try
         {
             //client.Connect("192.168.1.57", 8000);
-            client.Connect("172.30.181.35", 8000);
+            client.Connect("172.30.184.76", 8000);
 
             if (client.Connected)
             {

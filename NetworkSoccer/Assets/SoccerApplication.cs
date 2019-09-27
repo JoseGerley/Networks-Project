@@ -13,6 +13,7 @@ public class SoccerApplication : MonoBehaviour
     public SoccerModel model;
     public SoccerView view;
     public SoccerController controller;
+    public DatosUsuarioController duc; 
 
     // Init
     void Start() { }

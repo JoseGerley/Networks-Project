@@ -1,12 +1,14 @@
 Win64
 PlayerPath?
-C:/Users/alvar/Desktop/Networks-Project/NetworkSoccer.exe
+C:/Users/JOSE2/OneDrive/Documentos/Networks-Project/NetworkSoccer.exe
 SceneListBegin?
-Assets/Scenes/SampleScene.unity
+Assets/Login.unity
+Assets/Game.unity
+Assets/DatosPartido.unity
 SceneListEnd?
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Player1Controller
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
-5571233bcf7a2db8a2209797f18c46f6 Assembly-CSharp.dll:.SoccerApplication
+ca0f5a41d91d068ae3fe2b057c45f3ef Assembly-CSharp.dll:.SoccerApplication
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -115,7 +117,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-574f5c2781771874a610e6f0d6d9d73e Assembly-CSharp.dll:.SoccerView
+1625bd903cd89e34ee0b2e5b1b4c5b6d Assembly-CSharp.dll:.SoccerView
 4d16cfbaa8e821a2b370e80844a0e9bc Assembly-CSharp.dll:TMPro.Examples.Benchmark03
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -125,8 +127,8 @@ b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 08ee418b801850b56a351565b9c8bb78 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 47930f3b40e24ef5b3b5e3d9ada7097a Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-e5c8a835771e3be777a2d6c859933318 Assembly-CSharp.dll:.ReOrganizar
-be9a83643e75eca1aba9b48bdc3930dd Assembly-CSharp.dll:.Temporizador
+08715ba55cef08c9f893c64a1e1659ec Assembly-CSharp.dll:.ReOrganizar
+b258775b36e4562d6a9b7584107479f9 Assembly-CSharp.dll:.Temporizador
 77056d259dbfba5830c849bdc2d4cb8c Assembly-CSharp.dll:.AspectUtility
 3375c3d749f8f4cad889721b431bdc27 Assembly-CSharp.dll:TMPro.Examples.CameraController
 e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
@@ -149,7 +151,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-1f5a6b85444f7dddf82c1490e6c7d877 Assembly-CSharp.dll:.Login
+26ec9ee1f51d5e26de26f0fafa35b4dd Assembly-CSharp.dll:.Login
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Player2Controller
 11319334e5365797f8056694f9b5dae4 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.TMP_DigitValidator
@@ -193,7 +195,7 @@ e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexZoom
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 e80c1450883443c68d6c2dade213536f Assembly-CSharp.dll:TMPro.Examples.TMPro_InstructionOverlay
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SoccerModel
-c4385ebc13ba0eabe10f3893f8feb285 Assembly-CSharp.dll:.BalonController
+e75f4bf8fbb592cde97b78d05f85548e Assembly-CSharp.dll:.BalonController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.Examples.TeleType
 c12f6929b034322884ced721fca65b10 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
 df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
@@ -202,3 +204,8 @@ df434544c9f7b33d1cc7e635b180d279 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 8b1fe5dfdcf943fb3b72506b9f19335f Assembly-CSharp.dll:.EnvMapAnimator
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SoccerController
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GuardarGoles
+113c8ae0f93e8cdcd2ddb537d02464ad Assembly-CSharp.dll:.DatosController
+b6aabe8ff1b9f216a3d012a4a5c4410a Assembly-CSharp.dll:.PanelController
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TextLogItem
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DatosUsuarioController

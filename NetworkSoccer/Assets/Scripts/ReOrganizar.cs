@@ -5,7 +5,7 @@ using UnityEngine;
 public class ReOrganizar : MonoBehaviour
 {
 
-    public GameObject  cv;
+    //public GameObject  cv;
     public GameObject player;
     public GameObject balon;
     public GameObject player1;

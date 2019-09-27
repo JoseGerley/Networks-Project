@@ -11,6 +11,8 @@ public class BalonController : MonoBehaviour
     private int goalred;
     private int goalblue;
     private Rigidbody2D rb2d;
+    public GuardarGoles hist;
+    public Temporizador temp;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,12 +32,15 @@ public class BalonController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("GoalZoneRed"))
         {
-            goalblue ++;
+            goalred ++;
+            hist.addGoal(this.gol(false, temp.isST()), false);
             Point();
         }
         if (other.gameObject.CompareTag("GoalZoneBlue"))
         {
-            goalred++;
+            goalblue++;
+            hist.addGoal(this.gol(true, temp.isST()), true);
+            
             Point();
         }
         
@@ -54,5 +59,21 @@ public class BalonController : MonoBehaviour
     {
         RedScore.text = goalred.ToString();
         BlueScore.text = goalblue.ToString();
+    }
+
+    private string gol(bool isBlue, bool isST)
+    {
+        string msj = "";
+        if(isBlue)
+            msj += "Equipo Azul '"+temp.getTime()+"' ";
+        else
+            msj += "Equipo Rojo '" + temp.getTime() + "' ";
+
+        if (isST)
+            msj += "T2";
+        else
+            msj += "T1";
+
+        return msj;
     }
 }

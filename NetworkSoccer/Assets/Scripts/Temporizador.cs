@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Temporizador : MonoBehaviour
 {
-    public static float inicio = 60f;
+    public static float inicio = 10f;
     public ReOrganizar reorg;
     private float count;
     public Text contador;
@@ -20,14 +21,19 @@ public class Temporizador : MonoBehaviour
         contador.text = "Wait";
     }
 
+    public bool isST()
+    {
+        return st;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            iniciar = true;
-            seguir();
-        }
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    iniciar = true;
+        //    seguir();
+        //}
         if (!iniciar)
         {
             parar();
@@ -45,6 +51,7 @@ public class Temporizador : MonoBehaviour
                 {
                     contador.text = "finish";
                     parar();
+                    SceneManager.LoadScene("DatosPartido");
                 }
             }
             else
@@ -71,6 +78,12 @@ public class Temporizador : MonoBehaviour
            
     }
 
+    public void setBegin(bool t)
+    {
+        iniciar = t;
+        seguir();
+    }
+
     private void begin()
     {
         count = inicio;
@@ -81,6 +94,11 @@ public class Temporizador : MonoBehaviour
         reorg.stop();
 
     }
+    public int getTime()
+    {
+        return (int)count;
+    }
+
     private void seguir()
     {
         reorg.go();
