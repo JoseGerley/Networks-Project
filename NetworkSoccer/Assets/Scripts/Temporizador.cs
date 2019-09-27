@@ -96,7 +96,7 @@ public class Temporizador : MonoBehaviour
     }
     public int getTime()
     {
-        return (int)count;
+        return (int)(count+1);
     }
 
     private void seguir()
