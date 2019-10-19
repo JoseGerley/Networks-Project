@@ -6,6 +6,8 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Linq;
 using UnityEngine;
+using System.Net;
+using System.Text;
 
 public class SoccerController : SoccerElement
 {
@@ -21,7 +23,8 @@ public class SoccerController : SoccerElement
         //nick = app.Name.getName();
         s = app.view.getP1().getMove().x.ToString() + "|" + app.view.getP1().getMove().y.ToString();
         nick = app.duc.getNickName();
-        Conectar();
+        connectUDP();
+        connect();
         
 
     }
@@ -61,7 +64,7 @@ public class SoccerController : SoccerElement
         }
     }
 
-    public void Conectar()
+    public void connect()
     {
         try
         {
@@ -77,10 +80,7 @@ public class SoccerController : SoccerElement
 
                 streamw.WriteLine(nick);
                 streamw.Flush();
-
-
                 t.Start();
-                
             }
             else
             {
@@ -91,5 +91,38 @@ public class SoccerController : SoccerElement
         {
             Debug.Log(e.Message);
         }
+    }
+
+    public void connectUDP()
+    {
+        var client = new UdpClient();
+        IPEndPoint ep = new IPEndPoint(IPAddress.Parse("192.168.1.57"), 11000); // endpoint where server is listening
+        client.Connect(ep);
+
+        // send data
+        byte[] m = Encoding.ASCII.GetBytes(".");
+        client.Send(m, m.Length);
+
+        // then receive data
+        client.Client.ReceiveTimeout = 5000;
+        int h = 0;
+        try
+        {
+            while (true)
+            {
+                var data = client.Receive(ref ep);
+                Console.WriteLine("Packet received {0}", h);
+                //Bitmap x = (Bitmap)new ImageConverter().ConvertFrom(data);
+                //x.Save("Image" + h + ".jpeg", ImageFormat.Jpeg);
+                h++;
+            }
+        }
+        catch (Exception)
+        {
+
+            Console.WriteLine("Ended");
+            Console.Read();
+        }
+
     }
 }
