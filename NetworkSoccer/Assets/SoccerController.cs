@@ -23,8 +23,10 @@ public class SoccerController : SoccerElement
         //nick = app.Name.getName();
         s = app.view.getP1().getMove().x.ToString() + "|" + app.view.getP1().getMove().y.ToString();
         nick = app.duc.getNickName();
-        connectUDP();
-        connect();
+        Thread t1 = new Thread(connectUDP);
+        Thread t2 = new Thread(connectTCP);
+        t1.Start();
+        t2.Start();
         
 
     }
@@ -64,12 +66,12 @@ public class SoccerController : SoccerElement
         }
     }
 
-    public void connect()
+    public void connectTCP()
     {
         try
         {
             //client.Connect("192.168.1.57", 8000);
-            client.Connect("172.30.184.76", 8000);
+            client.Connect("192.168.1.57", 8000);
 
             if (client.Connected)
             {
@@ -121,7 +123,6 @@ public class SoccerController : SoccerElement
         {
 
             Console.WriteLine("Ended");
-            Console.Read();
         }
 
     }
