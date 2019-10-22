@@ -29,11 +29,11 @@ public class Temporizador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    iniciar = true;
-        //    seguir();
-        //}
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            iniciar = true;
+            seguir();
+        }
         if (!iniciar)
         {
             parar();
