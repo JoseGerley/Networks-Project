@@ -17,15 +17,14 @@ public class SoccerController : SoccerElement
     static private TcpClient client = new TcpClient();
     private string nick = "unknown";
     private string s = "";
+    public string Ip = "172.30.187.246";
     public void Start()
     {
         //Debug.Log(app.Name.getName());
         //nick = app.Name.getName();
         s = app.view.getP1().getMove().x.ToString() + "|" + app.view.getP1().getMove().y.ToString();
         nick = app.duc.getNickName();
-        Thread t1 = new Thread(connectUDP);
         Thread t2 = new Thread(connectTCP);
-        t1.Start();
         t2.Start();
         
 
@@ -71,7 +70,7 @@ public class SoccerController : SoccerElement
         try
         {
             //client.Connect("192.168.1.57", 8000);
-            client.Connect("192.168.1.57", 8000);
+            client.Connect(Ip, 8000);
 
             if (client.Connected)
             {
@@ -95,35 +94,5 @@ public class SoccerController : SoccerElement
         }
     }
 
-    public void connectUDP()
-    {
-        var client = new UdpClient();
-        IPEndPoint ep = new IPEndPoint(IPAddress.Parse("192.168.1.57"), 11000); // endpoint where server is listening
-        client.Connect(ep);
-
-        // send data
-        byte[] m = Encoding.ASCII.GetBytes(".");
-        client.Send(m, m.Length);
-
-        // then receive data
-        client.Client.ReceiveTimeout = 5000;
-        int h = 0;
-        try
-        {
-            while (true)
-            {
-                var data = client.Receive(ref ep);
-                Console.WriteLine("Packet received {0}", h);
-                //Bitmap x = (Bitmap)new ImageConverter().ConvertFrom(data);
-                //x.Save("Image" + h + ".jpeg", ImageFormat.Jpeg);
-                h++;
-            }
-        }
-        catch (Exception)
-        {
-
-            Console.WriteLine("Ended");
-        }
-
-    }
+    
 }

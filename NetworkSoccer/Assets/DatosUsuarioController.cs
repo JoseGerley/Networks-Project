@@ -28,7 +28,7 @@ public class DatosUsuarioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(nickname);
+        
     }
 
     public string getNickName()

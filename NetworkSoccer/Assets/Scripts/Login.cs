@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,14 +26,32 @@ public class Login : SoccerElement
         
     }
 
+    public void showAd()
+    {
+        Process p = new Process();
+        p.StartInfo.FileName = @"C:\Users\crisf\Downloads\Networks-Project\Networks-Project\NetworkSoccer\VideoPlayer\VideoPlayer\VideoPlayer\bin\Debug\VideoPlayer.exe";
+        p.Start();
+    }
+
     public void StoreName()
     {
-        Debug.Log("Button clicked");
         NickName = inputField.GetComponent<Text>().text;
         duc.setNickName(NickName);
         //app.controller.setName(NickName);
         //app.controller.Conectar();
         //Debug.Log("Tan marica");
+        try
+        {
+            StreamWriter sw = new StreamWriter("Name.txt");
+            sw.WriteLine(NickName);
+            sw.Close();
+        }
+        catch
+        {
+
+        }
+
+        showAd();
         SceneManager.LoadScene("Game");
         
     }

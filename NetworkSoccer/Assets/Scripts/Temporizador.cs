@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,9 +13,20 @@ public class Temporizador : MonoBehaviour
     public Text contador;
     private bool st;
     private bool iniciar;
+    private int addsTimes;
+    private int tad = (int)Random.Range(30f, 50f);
+
+    public void showAd()
+    {
+        addsTimes = 0;
+        Process p = new Process();
+        p.StartInfo.FileName = @"C:\Users\crisf\Downloads\Networks-Project\Networks-Project\NetworkSoccer\VideoPlayer\VideoPlayer\VideoPlayer\bin\Debug\VideoPlayer.exe";
+        p.Start();
+    }
     // Start is called before the first frame update
     void Start()
     {
+        UnityEngine.Debug.Log(tad);
         count = inicio;
         st = false;
         iniciar = false;
@@ -29,6 +41,7 @@ public class Temporizador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //if(Input.GetKeyDown(KeyCode.Space))
         //{
         //    iniciar = true;
@@ -51,6 +64,13 @@ public class Temporizador : MonoBehaviour
                 {
                     contador.text = "finish";
                     parar();
+                    if(addsTimes == 1)
+                    {
+                        showAd();
+                        addsTimes++;
+                    }
+                        
+
                     SceneManager.LoadScene("DatosPartido");
                 }
             }
@@ -59,6 +79,12 @@ public class Temporizador : MonoBehaviour
                 if (count >= 0)
                 {
                     contador.text = "" + count.ToString("f0");
+                    if((int)count==tad && addsTimes == 0)
+                    {
+                        UnityEngine.Debug.Log(tad);
+                        showAd();
+                        addsTimes++;
+                    }
                 }
                 else
                 {
