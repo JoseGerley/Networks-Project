@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -67,7 +68,7 @@ namespace VideoPlayer
 
                 while (true)
                 {
-                    var data = client.Receive(ref ep);
+                    var data = Decompress(client.Receive(ref ep));
                     Console.WriteLine("Packet received {0}", h);
                     Bitmap x = (Bitmap)new ImageConverter().ConvertFrom(data);
                     pictureBox1.Image = x;
@@ -94,6 +95,21 @@ namespace VideoPlayer
                 Close();
             }
 
+        }
+
+        public static byte[] Decompress(byte[] gzBuffer)
+        {
+            MemoryStream ms = new MemoryStream();
+            int msgLength = BitConverter.ToInt32(gzBuffer, 0);
+            ms.Write(gzBuffer, 4, gzBuffer.Length - 4);
+
+            byte[] buffer = new byte[msgLength];
+
+            ms.Position = 0;
+            GZipStream zip = new GZipStream(ms, CompressionMode.Decompress);
+            zip.Read(buffer, 0, buffer.Length);
+
+            return buffer;
         }
 
         private void button1_Click(object sender, EventArgs e)
