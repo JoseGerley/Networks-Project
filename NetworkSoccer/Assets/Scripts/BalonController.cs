@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BalonController : MonoBehaviour
+public class BalonController : SoccerElement
 {
     public ReOrganizar organizador;
     public Text RedScore;
     public Text BlueScore;
-    private int goalred;
-    private int goalblue;
+    public int goalred;
+    public int goalblue;
     private Rigidbody2D rb2d;
     public GuardarGoles hist;
     public Temporizador temp;
@@ -55,7 +55,7 @@ public class BalonController : MonoBehaviour
         
     }
 
-    private void SetText()
+    public void SetText()
     {
         RedScore.text = goalred.ToString();
         BlueScore.text = goalblue.ToString();
@@ -75,5 +75,21 @@ public class BalonController : MonoBehaviour
             msj += "T1";
 
         return msj;
+    }
+
+    public string getResume()
+    {
+        string ret = "";
+        ret += goalred + "|" + goalblue + "|" + temp.getTime() + "|" + app.view.temp.isST() + "#" + hist.getResume();
+        return ret;
+    }
+
+    public void restart()
+    {
+        goalblue = 0;
+        goalred = 0;
+        rb2d = GetComponent<Rigidbody2D>();
+        SetText();
+        hist.restart();
     }
 }

@@ -29,7 +29,7 @@ public class Login : SoccerElement
     public void showAd()
     {
         Process p = new Process();
-        p.StartInfo.FileName = @"C:\Users\crisf\Downloads\Networks-Project\Networks-Project\NetworkSoccer\VideoPlayer\VideoPlayer\VideoPlayer\bin\Debug\VideoPlayer.exe";
+        p.StartInfo.FileName = @"C:\Users\crisf\source\repos\FINAL\Networks-Project\NetworkSoccer\VideoPlayer\VideoPlayer\VideoPlayer\bin\Debug\VideoPlayer.exe";
         p.Start();
     }
 

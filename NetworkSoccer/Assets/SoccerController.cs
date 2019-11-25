@@ -17,7 +17,7 @@ public class SoccerController : SoccerElement
     static private TcpClient client = new TcpClient();
     private string nick = "unknown";
     private string s = "";
-    public string Ip = "172.30.187.246";
+    public string Ip = "192.168.1.57";
     public void Start()
     {
         //Debug.Log(app.Name.getName());
@@ -54,6 +54,37 @@ public class SoccerController : SoccerElement
                 {
                     app.view.temp.setBegin(true);
                 }
+                if(p.Equals("Restart"))
+                {
+                    app.view.temp.restart();
+                    app.view.bc.restart();
+                }
+                if(p.Equals("Wait"))
+                {
+                    app.view.temp.waiting();
+                }
+                if(p.Equals("givemelove"))
+                {
+                    streamw.WriteLine(app.view.bc.getResume());
+                    streamw.Flush();
+                }
+                if(p.Equals("takeyourlove"))
+                {
+                    string rec = streamr.ReadLine();
+                    var data = rec.Split('#');
+                    var d = data[0].Split('|');
+                    app.view.bc.goalblue = int.Parse(d[0]);
+                    app.view.bc.goalred = int.Parse(d[1]);
+                    app.view.bc.SetText();
+                    app.view.bc.hist.setGoals(int.Parse(d[0]), int.Parse(d[1]));
+                    app.view.temp.setTime(int.Parse(d[2]));
+                    app.view.temp.setST(bool.Parse(d[3]));
+                    app.view.bc.hist.setHist(data[1].Split(',').ToList());
+                }
+                if(p.Equals("keep"))
+                {
+                    app.view.temp.setBegin(true);
+                }
                 float[] o = p.Split('|').Select(x => float.Parse(x)).ToArray();
 
                 app.view.getP2().setMove(new Vector2(-o[0], -o[1]));
@@ -69,6 +100,7 @@ public class SoccerController : SoccerElement
     {
         try
         {
+            Debug.Log("connecting");
             //client.Connect("192.168.1.57", 8000);
             client.Connect(Ip, 8000);
 

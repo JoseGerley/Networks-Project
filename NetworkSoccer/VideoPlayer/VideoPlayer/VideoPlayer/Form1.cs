@@ -51,7 +51,7 @@ namespace VideoPlayer
         public async void connectUDP()
         {
             client = new UdpClient();
-            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("172.30.187.246"), 11000); // endpoint where server is listening
+            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("192.168.1.57"), 11000); // endpoint where server is listening
             client.Connect(ep);
 
             // send data
@@ -71,7 +71,7 @@ namespace VideoPlayer
                     Console.WriteLine("Packet received {0}", h);
                     Bitmap x = (Bitmap)new ImageConverter().ConvertFrom(data);
                     pictureBox1.Image = x;
-                    pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipX);
+                    //pictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipX);
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                     await Task.Delay(60);
                     seconds += 0.06;
@@ -132,6 +132,11 @@ namespace VideoPlayer
             RemoveMenu(hmenu, cnt - 2, MF_DISABLED | MF_BYPOSITION);
 
             DrawMenuBar(this.Handle);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

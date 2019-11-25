@@ -81,4 +81,32 @@ public class GuardarGoles : MonoBehaviour
         }
         return msj;
     }
+
+    public void restart()
+    {
+        golesAzul = 0;
+        golesRojo = 0;
+        historial = new List<string>();
+    }
+
+    public string getResume()
+    {
+        string m = "";
+        foreach (var item in historial)
+        {
+            m += item+",";
+        }
+        return m.Remove(m.Length - 1);
+    }
+
+    public void setGoals(int blue, int red)
+    {
+        golesAzul = blue;
+        golesRojo = red;
+    }
+
+    public void setHist(List<string> l)
+    {
+        historial = l;
+    }
 }

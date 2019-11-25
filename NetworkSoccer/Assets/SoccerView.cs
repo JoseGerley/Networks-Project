@@ -6,6 +6,7 @@ public class SoccerView : SoccerElement
 {
     public Player1Controller p1;
     public Player2Controller1 p2;
+    public BalonController bc;
     //public GameObject login;
     public Temporizador temp;
 

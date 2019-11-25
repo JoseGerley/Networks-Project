@@ -33,6 +33,11 @@ public class Temporizador : MonoBehaviour
         contador.text = "Wait";
     }
 
+    public void setTime(float t)
+    {
+        count = t;
+    }
+
     public bool isST()
     {
         return st;
@@ -128,10 +133,30 @@ public class Temporizador : MonoBehaviour
     private void seguir()
     {
         reorg.go();
-        begin();
+        //begin();
     }
 
+    public void restart()
+    {
+        count = inicio;
+        st = false;
+        iniciar = false;
+        contador.text = "Wait";
 
+    }
+
+    public void waiting()
+    {
+        iniciar = false;
+        contador.text = "Wait";
+    }
+
+    public void setST(bool s)
+    {
+        st = s;
+    }
+
+    
 
 
 }
