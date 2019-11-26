@@ -1,0 +1,5 @@
+- Diseñar Pagina
+- Agrsgar Informacion
+- Agragar Resultado y Analisis
+- Subir a Docker
+
