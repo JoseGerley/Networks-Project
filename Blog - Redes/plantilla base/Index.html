@@ -8,40 +8,46 @@
     <link rel="shortcut icon" href="principal.ico" type="image/x-icon">
     <link rel="icon" href="principal.ico" type="image/x-icon">
     <link href ="blog.css" rel ="stylesheet">
-    
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
   <title>Investigacion</title>
 </head>
 <body>
-
+   
+   <div id="fb-root"></div>
+   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v5.0"></script>
+   
     <div class="container">
      
       <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-        
-         <div class="col-1 pt-2" >
-            <a class="blog-header-logo text-dark" href="Index.html" >Investigación</a>
-          </div>
+       <div class="row flex-nowrap justify-content-between align-items-center">
+           <div class="col-9 pt-2" >
+           <a class="blog-header-logo text-dark" href="Index.html" >Investigación</a>
+           </div>
           
           <div class="col-1 pt-2">
             <a class="text-muted" href="https://docs.google.com/document/d/1JbD-S5XC4WgEVtQ4JaCjULks11VvyhuL-FHWEysN4Us/edit?usp=sharing" target="_blank">Ir a Paper</a>
           </div>
+          <div class="col-1 pt-2">
+            <a class="text-muted" href="https://github.com/JoseGerley/Networks-Project" target="_blank">Proyecto</a>
+          </div> 
+            <div class="col-1 pt-2">
+            <a class="text-muted" href="https://github.com/cristianm123/NetworksServer" target="_blank">Servidor</a>
+              </div>  
           
         </div>
       </header>
 
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" href="#">Resumen</a>
-          <a class="p-2 text-muted" href="#">Introduccion</a>
-          <a class="p-2 text-muted" href="#">Contexto</a>
-          <a class="p-2 text-muted" href="#">Design</a>
-          <a class="p-2 text-muted" href="#">Problema</a>
-          <a class="p-2 text-muted" href="#">Preguntas</a>
-          <a class="p-2 text-muted" href="#">Objetivos/Metas</a>
-          <a class="p-2 text-muted" href="#">Metodología</a>
-          <a class="p-2 text-muted" href="#">Resultados y Conclusiones</a>
+          <a class="p-2 text-muted" href="#resumen">Resumen</a>
+          <a class="p-2 text-muted" href="#intro">Introduccion</a>
+          <a class="p-2 text-muted" href="#contexto">Contexto</a>
+          <a class="p-2 text-muted" href="#prom">Problema</a>
+          <a class="p-2 text-muted" href="#preguntas">Preguntas</a>
+          <a class="p-2 text-muted" href="#obj">Objetivos/Metas</a>
+          <a class="p-2 text-muted" href="#metodologia">Metodología</a>
+          <a class="p-2 text-muted" href="#resultados">Resultados y Conclusiones</a>
           <a class="p-2 text-muted" href="#">Referencias</a>
         </nav>
       </div>
@@ -65,7 +71,7 @@
           
         </div>
       </div>
-
+<!--
       <div class="row mb-2">
         <div class="col-md-6">
           <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -96,119 +102,357 @@
           </div>
         </div>
       </div>
+      -->
+      
     </div>
 
     <main role="main" class="container">
-      <div class="row">
+      
+       <div class="row">
         <div class="col-md-8 blog-main">
-          <h3 class="pb-4 mb-4 font-italic border-bottom">
-            From the Firehose
-          </h3>
+        
+        <!--Introduccion-->
+         <div class="blog-post" id="intro">
+            <h2 class="blog-post-title">Introduccion</h2>
+            <p class="blog-post-meta">Noviembre 27, 2019 
+            
+            <p class="blog-parrafo">Hoy en día, los tamaños de muchos videos, audios o aplicaciones pueden ser extremadamente grandes, por lo que la reducción del tamaño del archivo puede jugar un rol muy importante en la administración de recursos informáticos o en el tiempo de transmisión. El principal propósito de este artículo de investigación es implementar y analizar algoritmos de compresión de datos. La compresión de datos se puede definir como la reducción del volumen de datos de un archivo, es decir, utilizar una menor de cantidad de bits para representar un mismo archivo. Ahora bien, existen muchas técnicas y algoritmos para comprimir datos. Sin embargo, se tratarán únicamente los más comunes que permitan comprimir archivos de audio o video y garantizar la menor pérdida de datos posibles. Por otra parte, la compresión de datos se basa generalmente en buscar repeticiones, patrones o secuencias en series de datos para, posteriormente, almacenar el dato junto con el número de veces que se repite, esta nueva secuencia de símbolos puede ser almacenada o enviada a través de una red.</p>
+        </div>
+         
+         <!--Contexto-->
+         <div class="blog-post" id="contexto">
+            <h2 class="blog-post-title">Contexto</h2>
+            <p class="blog-post-meta">
+            
+            <p class="blog-parrafo">En la actualidad, la tecnología ha avanzado en materia de procesamiento superando la capacidad de almacenamiento e inclusive, más rápido que los anchos de banda de la red, debido a que dichos anchos de banda necesitan de grandes cambios respecto a sus infraestructuras de telecomunicaciones. A causa de esto,  es necesario un procedimiento para reducir el tamaño de los datos mediante el aprovechamiento máximo de la potencia de procesamiento de los procesadores.
+            </p>
+            <br>
+            <p class="blog-parrafo">La arquitectura Cliente-Servidor existía antes de la aparición de las redes de área local. El primer aproximamiento a esta arquitectura fue en 1960, en el que se tenía Mainframes manejados por el Command Prompt. En 1970, nacieron las aplicaciones interactivas en las que el usuario realizaba una acción con una interfaz y esta tenía una respuesta. En 1980, con el comienzo de las redes locales y con esta, el inicio de las eras de la computadora central, computadoras dedicadas, conexión libre y por último, a través de redes. Para el año 2000, se implementó la combinación de mainframes con redes con el propósito de la creación de los Web Services.</p>
+            <br>
+            <p class="blog-parrafo">El procesamiento para la compresión de datos se divide en dos ramas; compresión de datos con pérdida y compresión de datos sin pérdida. La primera mencionada busca una representación fiel del archivo original basándose en la menor información posible para representar a esta. No obstante, es imposible la reconstrucción exacta después de la ejecución del algoritmo. Esta es mayormente usada en contenido multimedia en la que el recorte de frames o el acotamiento de frecuencias imperceptibles para el oído humano, son vitales para el ahorro de recursos respecto a, por ejemplo, una transmisión de datos vía online. La segunda hace referencia a la conservación de la información, tanto antes como después de la ejecución del algoritmo. Esto conlleva a mayores tiempos de procesamiento. Generalmente es utilizado en archivos de texto.</p>
 
-          <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
-            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
-            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
-            <hr>
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <h2>Heading</h2>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            <pre><code>Example code block</code></pre>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            <ol>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+        </div>
+          
+          <!--Problema-->
+           <div class="blog-post" id="prom">
+            <h2 class="blog-post-title">Problema</h2>
+            <p class="blog-post-meta">
+            
+            <p class="blog-parrafo">Se desea implementar un proyecto de desarrollo de software, que consiste en un juego de fútbol con perspectiva 2D, con énfasis en la arquitectura ClienteServidor y la aplicación de los algoritmos de compresión
+            de datos para su posterior análisis, de acuerdo al enunciado
+            proporcionado por el curso de Redes 2019-II [1] en el que
+            se evaluará las habilidades y conocimientos adquiridos en
+            la asignatura, como también, de cursos anteriores
+            requeridos para la implementación de código. El equipo
+            conformado por los cuatro integrantes acordó desarrollar el
+            proyecto mediante el lenguaje C# bajo el software
+            Microsoft Visual Studio, IDE compilador de carácter
+            gratuito. Para la interfaz y motor gráfico será usada la
+            herramienta Unity en su referencia 2018.4.9f1 de versión
+            gratuita. Respecto al manejo de versiones, se usará un
+            repositorio público de la plataforma Github[2] por medio
+            de un solo branch.</p>
+
+        </div>
+         
+         <!--Objetivos-->
+         <div class="blog-post" id="obj">
+           <p class="blog-post-meta">
+            <h2 class="blog-post-title">Objetivos/Metas</h2>
+            
+            <h2 class="blog-post-subtitle">Objetivos Generales</h2>
+            
+            <ol class="blog-parrafo romano-space" type="I">
+                <li>Analizar la variación tanto del tamaño del video como en la calidad de forma subjetiva y objetivamente con cada algoritmo de compresión y con diferentes archivos multimedia. </li>
             </ol>
-            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-          </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h2 class="blog-post-title">Another blog post</h2>
-            <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-          </div><!-- /.blog-post -->
-
-          <div class="blog-post">
-            <h2 class="blog-post-title">New feature</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
-
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-          </nav>
+            <br>
+            <h2 class="blog-post-subtitle">Objetivos Especificos</h2>
+            <ol class="blog-parrafo romano-space" type="I">
+                
+                <li> Utilizar un protocolo orientado a la conexión TCP para garantizar la transmisión de los movimientos del cliente con el menor retardo posible.</li>
+                
+                <li>Utilizar el protocolo UDP como herramienta eficaz para la transmisión de contenidos multimedia.</li>
+                
+                <li>Desarrollar un servidor en C# que gestione y organice partidas de fútbol mediante la conexión de pares de clientes.</li>
+                
+                <li>Implementar la modificación de dos algoritmos de compresión de contenido multimedia, bien sea audio o video, con el propósito de analizar variaciones en los mismos, en una partida del juego.
+                    <ul >
+                        <li>Comparar la calidad del video antes y después de realizar la compresión del archivo en ambas implementaciones.</li>
+                        <li>Medir los tiempos de compresión, de envío y recepción en ambas implementaciones.</li>
+                    </ul>
+                </li>
+                
+                <li>Determinar qué tanto afecta el tamaño del archivo a ambos algoritmos.</li>
+                
+            </ol>
+        </div>
+         
 
         </div><!-- /.blog-main -->
-
+        
         <aside class="col-md-4 blog-sidebar">
+         
           <div class="p-4 mb-3 bg-light rounded">
             <h4 class="font-italic">About</h4>
             <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
-
-          <div class="p-4">
-            <h4 class="font-italic">Archives</h4>
-            <ol class="list-unstyled mb-0">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>
+         
+         <div class="p-4 mb-3 bg-light rounded" id="resumen">
+            <h4 class="font-italic">Resumen</h4>
+            <p class="mb-0">La comprensión de archivos es un requerimiento muy común en el desarrollo de aplicaciones. Existen diferentes algoritmos dedicados a comprimir ciertos tipos de formatos de datos y se debe conocer cuáles son las ventajas o desventajas de cada uno. En este trabajo, se presentarán los resultados obtenidos mediante la investigación sobre los algoritmos de compresión en materia de implementación y análisis, con el objetivo de reconocer, evaluar, modificar e implementar en código los algoritmos de compresión más comunes. Todo esto, con la finalidad de mejorar la velocidad de transmisión de datos dentro de la aplicación basada en el lenguaje C# de la mano del motor gráfico Unity, con temática de fútbol en perspectiva 2D.</p>
+            <hr>
+            <h5 class="font-italic">Índice de términos</h5>
+            <div class="row">
+                <ul class="mb-0">
+                    <li>Cliente</li>
+                    <li>Servidor</li>
+                    <li>Algoritmo</li>
+                    <li>Dencoding</li>
+                    <li>Compresión</li>
+                    <li>Topología de red</li>
+                    <li>Petición</li>
+                    <li>Encoding</li>
+                </ul>
+              </div>
+        </div>
+          
+          <div class="p-4 mb-3 bg-light rounded" id="preguntas">
+            <h4 class="font-italic">Preguntas Investigacion</h4>
+            <p class="mb-0">Teniendo el cuenta el problema, los diferentes factores que intervienen en este proceso de compresión de información y además, apoyándonos en los recursos obtenidos del curso de Redes y Comunicaciones, se plantea solucionar la siguiente pregunta ¿Cómo varía la calidad y la eficiencia del envío y recepción de audio y video dependiendo del tamaño del mismo?.</p>
           </div>
 
           <div class="p-4">
-            <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
+            <h4 class="font-italic">Comentarios</h4>
+            
+            <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="33.3%" data-numposts="10">
+                
+            </div>
+            
           </div>
+
         </aside><!-- /.blog-sidebar -->
-
+        
+        
       </div><!-- /.row -->
+       
+       <div class="container">
+       
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-12 px-0 text-center">
+         
+          <h1 class="font-italic display-4 ">Investigación</h1>
+           
+            </div>
+            <hr class="hr-white">
+            <div class="row">
+                <div class="col-4 my-4 px-4 text-center">
+                    <p class="lead my-1 font-italic text-center"> <b class="br-edit"> "</b> Encuentra la metodoligia utilizada para está investigación <b class="br-edit"> "</b></p>
+                </div>
+                <div class="col-4 my-4 px-4 text-center">
+                    <p class="lead my-1 font-italic text-center"> <b class="br-edit"> "</b> Encuentra los resultados y el analisis de datos <b class="br-edit"> "</b></p>
+                </div>
+                <div class="col-4 px-4 py-4 text-center">
+                    <p class="lead my-1 font-italic text-center"> <b class="br-edit"> "</b> Encuentra recomendaciones para futuros trabajos <b class="br-edit"> "</b></p>
+                </div>
+            </div>
+            
+            
+           </div>
+        </div>
+        
+       <div class="row">
+        <div class="col-md-12 blog-main">
+        <!--METODOLOGIA-->
+         <div class="blog-post" id="metodologia">
+            <h2 class="blog-post-title">Metodologia</h2>
+            <p class="blog-post-meta">
+            
+            
+                                   <p class="blog-parrafo">La metodología que se lleva a cabo en este proyecto es
+                                    de tipo experimental, debido a que se probará la
+                                    eficiencia y eficacia de los métodos de compresión en
+                                    varios escenarios para así lograr tener una idea general
+                                    del comportamiento de cada uno en los diferentes
+                                    casos, a continuación se detalla el proceso que se debe
+                                    realizar:</p>
+            <br>
+            
+                                   <p class="blog-parrafo">En primer lugar, se debe realizar el desarrollo de la
+                                    aplicación junto con el servidor TCP que orqueste los
+                                    partidos, para así poder añadir las funcionalidades del
+                                    juego, además de permitir la conexión de varios
+                                    clientes. Estos poseen la opción de salirse de la partida
+                                    en cualquier momento, como también, de obtener un
+                                    informe con los datos más relevantes del encuentro
+                                    una vez terminada la partida</p>
+             <br>
+            
+                                   <p class="blog-parrafo">En segundo lugar, se desarrolla el servidor UDP que
+                                    envíe la información del arreglo de bytes con cualquier
+                                    método de compresión tradicional para posteriormente
+                                    ser visualizado en frames (cuadros) por segundo
+                                    determinando la velocidad mediante hilos. En este
+                                    caso, se usó un algoritmo para comprimir un mapa de
+                                    bits teniendo como parámetros el bitmap y la calidad
+                                    que se quiere del archivo.</p>
+             <br>
+            
+                                   <p class="blog-parrafo">Ahora bien, se tienen los elementos principales que
+permiten jugar y realizar el envío de información, se
+puede continuar con la implementación sobre el
+servidor UDP de la siguiente manera:
+</p>
+            
+             <br>
+            
+                                   <p class="blog-parrafo">Se debe elegir los algoritmos a implementar realizando
+las modificaciones necesarias para el envío de
+contenido multimedia.</p>
+                                                                       
+             <br>
+            
+                                   <p class="blog-parrafo">La recopilación de la información se hará de forma
+experimental, es decir, implica la observación, el
+registro y la manipulación de las variables del objeto de
+estudio, de manera que se tomarán aproximadamente
+dos o tres muestras de tiempo y de los parámetros de
+calidad con cada algoritmo, ambos con un archivo del
+mismo tamaño, a esas mediciones se les calcula un
+promedio y se procede a modificar el tamaño del
+archivo para realizar nuevamente el experimento pero
+con otro tamaño del archivo.</p>
+             
+             <br>
+            
+                                   <p class="blog-parrafo">Se tomará como ejemplo el estudio realizado por Sotelo
+y Joskowicz[11] en su artículo “Modelo de Estimación
+de Calidad de Video” para el desarrollo de las métricas
+respecto a la transmisión contenido audio visual. En
+este es necesario disponer de la imagen o cuadros
+originales, esto con el propósito de dar representación
+lo más fiel posible. El error cuadrático medio (MSE)
+descrito en la primera fórmula(1) junto a la raíz
+cuadrada (RMSE) en sus siglas en inglés Root Mean
+Square Error situada en la segunda fórmula(2), las
+cuales permiten encontrar una relación señal a ruido de
+pico (PSNR) ó Signal to Noise Ratio establecidas en la
+siguiente ecuación(3):</p>
+      <div class="my-4">
+          <img src="formulas.JPG" class="img-style">
+          <p class="info-img">Figura 1. Fórmulas de la estimación de la calidad de video.</p>
+      </div>
+       
+       <br>
+            
+                                   <p class="blog-parrafo">Según Sotelo y Joskowicz (2012), “En las ecuaciones (1) a (3) la imagen tiene N x M píxeles y T cuadros, x, y son los píxeles de la imagen original y la distorsionada respectivamente. L es el rango dinámico que pueden tomar los valores de x o y, y toma el valor 255 para 8 bits por píxel.” 
+</p>
+        <br>    
+                                   <p class="blog-parrafo">Debido a la pérdida de información deberán encontrarse cambios notorios del archivo original al al introducido en el proceso de codificación por el algoritmo de compresión utilizado. Cabe resaltar que no solo se puede perder la calidad debido a la compresión, sino también, a factores como retrasos, pérdida de paquetes, etc, que son finalmente reflejados en la partida del cliente como frames cortados o pérdida de píxeles.
+</p>
+      <div class="my-4">
+          <img src="ejemploA.JPG" class="img-style">
+          <p class="info-img">Figura 2. Comparación de compresión de la letra a.</p>
+      </div>
+            
+                                   <p class="blog-parrafo">En otro orden de ideas, no se descarta la posibilidad de utilizar metodología subjetiva en la que por medio de la opinión se valide mediante la inclusión de una rúbrica en la que se clasifique que tan óptimo puede ser el audio escuchado o la visualización de un video. Este es un recurso menos costoso en cuanto a implementación se refiere. “La opinión media, obtenida en forma directa mediante el “MOS” (Mean Opinion Score), (...) los evaluadores son individuos que juzgan la calidad en base a su propia percepción y experiencia previa.” (Sotelo, Joskowicz. 2012).  Por tanto, no es necesario un conocimiento en el área de Redes y Computación como criterio de validación de la experiencia del cliente con la aplicación. Como se observa en la figura 1, a la derecha procesada y la izquierda sin procesar, es posible que, en base a la experiencia de cada usuario, haya opiniones distintas acerca de cuál podría ser una mejor imagen.
+</p>
+      
+       <br>
+           <div class="row">
+               <div class="col-md-6">
+                   <img src="tabla1.JPG" class="img-style">
+          <p class="info-img">Tabla 1. Rúbrica de compresión de video mediante metodología subjetiva.
+</p>
+               </div>
+               <div class="col-md-6">
+                    <p class="blog-parrafo">Se estableció una tabla en la que mediante un rango del 1 al 10 el cliente pueda establecer su experiencia dependiendo de qué tan agresivo pueda ser el algoritmo o factores anteriormente mencionados, siendo 1-0 las puntuaciones más bajas y 9-10 las altas siendo estas las más fieles al contenido original.</p>
+               </div>
+           </div>
+            
+        </div>
+          <!--RESULTADOS-->
+          <div class="blog-post" id="resultados">
+            <h2 class="blog-post-title">Resultados y Analisis</h2>
+            <p class="blog-post-meta">
+            
+            <p class="blog-parrafo">Se utilizaron dos algoritmos de compresión para la futura evaluación y análisis de resultados con el propósito de comparar la eficiencia, ventajas y desventajas que cuenta cada uno de estos, así como también, el porcentaje de compresión de cada fotograma y la calidad con la que se reconstruye el video después de ser comprimido. 
+            <br>
+El primero se define como un algoritmo de compresión con pérdida o “Lossy Algorithm”; en el que, colocandolo en práctica, su codificación tuvo como objetivo representar cierta cantidad de información utilizando una menor cantidad de la misma, siendo imposible una reconstrucción exacta de los datos originales, por ende, no existe la necesidad de implementar un algoritmo de descompresión debido a que, en lugar de guardar una copia exacta, solo se guarda una aproximación. Esta aproximación se aprovecha de las limitaciones de la percepción humana para acotar frames o cuadros en los que el cambio entre uno y otro es prácticamente imperceptible. 
+<br>
+El segundo utilizado fue un algoritmo sin pérdida también denominado “Lossless Algorithm”; en el que, colocandolo en práctica, su codificación tuvo como objetivo representar cierta cantidad de información utilizando u ocupando un espacio menor, siendo posible una reconstrucción exacta de los datos originales, esto evoca la necesidad de implementar un algoritmo de descompresión que permita la visualización sino idéntica prácticamente igual a la inicial. Es decir, la compresión sin pérdidas engloba a aquellas técnicas que garanticen generar un duplicado exacto del flujo de datos de entrada después de un ciclo de compresión / expansión. Por esta razón es utilizada para comprimir archivos que contienen datos que no pueden ser degradados o perdidos, como pueden ser documentos de texto, imágenes y sonido. 
+<br>
+Con el objetivo de profundizar en los resultados obtenidos, no solo se tuvo en cuenta como prueba el material audiovisual publicitario como requerimiento propuesto en el enunciado brindado para el proyecto sino también, se puso a prueba diferentes escenarios en los que se viera el potencial a fondo de estos algoritmos a evaluar. 
+<br>
+Para el primer escenario se obtuvieron los siguientes resultados de acuerdo al material audiovisual publicitario tanto para el algoritmo con pérdida de información como el algoritmo sin pérdida de información: 
+     
+            </p>
+            <br>
+            
 
+        <div class="row my-3">
+               <div class="col-md-6">
+                   <br>
+                   <img src="tabla2.JPG" class="img-style">
+          <p class="info-img">Tabla 2. Algoritmo de compresión sin pérdida (Video publicitario).     
+                   </p>
+
+               </div>
+               <div class="col-md-6">
+                    <p class="blog-parrafo">En base a la tabla 2 y gráfico 1 obtenidos respecto al algoritmo de compresión con pérdida de información se representaron  los porcentajes de acuerdo a la proporción en que comprime cada fotograma de acuerdo al Array de Bytes. Este se obtiene mediante el número de bytes del fotograma ya comprimido dividido el número de bytes del fotograma normal, es decir, a un menor valor de compresión se considera una compresión más óptima. Se tomaron los primeros 25 fotogramas como muestra representativa obteniendo como valor máximo un porcentaje de compresión de 152% y un mínimo de 88% para finalmente obtener una media de 122%, lo que permite inferir que posee una
+                    tasa de compresión muy baja a comparación del algoritmo con pérdida. 
+                   </p>
+                    <br> 
+                    
+                    <img src="grafico1.JPG" class="img-style">
+          <p class="info-img">Gráfico 1. Algoritmo de compresión sin pérdida (Video publicitario). 
+                   </p>
+                   
+<p class="blog-parrafo">Esto se debe a que al comprimir el arreglo de bytes se obtuvo un peso superior al original, posiblemente a la implementación como también a que este tipo de algoritmos tienen un mayor rendimiento respecto a la compresión de textos ya que se posee un patrón de seguimiento que permite determinar por medio de probabilidades el siguiente dato. Sin embargo, en un material audiovisual se convierte en una situación prácticamente impredecible si se trata de un video con una representación de colores muy amplia. </p>
+              
+               </div>
+           </div>
+        
+        <hr class="hr-black">
+        <div class="row my-3">
+               
+                   <div class="col-md-6">
+                    <p class="blog-parrafo">En base a la tabla 2 y gráfico 1 obtenidos respecto al algoritmo de compresión con pérdida de información se representaron  los porcentajes de acuerdo a la proporción en que comprime cada fotograma de acuerdo al Array de Bytes. Este se obtiene mediante el número de bytes del fotograma ya comprimido dividido el número de bytes del fotograma normal, es decir, a un menor valor de compresión se considera una compresión más óptima. Se tomaron los primeros 25 fotogramas como muestra representativa obteniendo como valor máximo un porcentaje de compresión de 152% y un mínimo de 88% para finalmente obtener una media de 122%, lo que permite inferir que posee una
+                    tasa de compresión muy baja a comparación del algoritmo con pérdida. 
+                   </p>
+                    <br> 
+                    
+                    <img src="grafico1.JPG" class="img-style">
+          <p class="info-img">Gráfico 1. Algoritmo de compresión sin pérdida (Video publicitario). 
+                   </p>
+                   
+<p class="blog-parrafo">Esto se debe a que al comprimir el arreglo de bytes se obtuvo un peso superior al original, posiblemente a la implementación como también a que este tipo de algoritmos tienen un mayor rendimiento respecto a la compresión de textos ya que se posee un patrón de seguimiento que permite determinar por medio de probabilidades el siguiente dato. Sin embargo, en un material audiovisual se convierte en una situación prácticamente impredecible si se trata de un video con una representación de colores muy amplia. </p>
+              
+               </div>
+               
+                  <div class="col-md-6">
+                   <br>
+                   <img src="tabla2.JPG" class="img-style">
+          <p class="info-img">Tabla 2. Algoritmo de compresión sin pérdida (Video publicitario).     
+                   </p>
+
+               </div>
+               
+           </div>
+         
+        </div>
+          
+            
+            </div>
+          
+          <nav class="blog-pagination">
+            <a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+          </nav>
+         
+          </div>
+          
     </main><!-- /.container -->
-
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
       <p>
